@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST['register'])){
    ;
-    $myfile = fopen("user_data.csv", "a") or die("Unable to open file!");
+    $myfile = fopen("user_data.csv", "w") or die("Unable to open file!");
     fputcsv($myfile, $_POST);
-    print_r($userdata);
+    print_r($_POST);
 }
 ?>
